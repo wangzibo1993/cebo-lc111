@@ -1,0 +1,85 @@
+1.7:
+#################################################
+- Watchdog timer added to Cebo-LC (Firmware 1.4)
+
+1.6:
+#################################################
+- Source components license set to Cesys Software License 1.0 (license/CSL-1.0.txt).
+- Licenses for third party libraries and tools added.
+- Visal Studio 2015 compatibility verified.
+- Windows 8.1 and Windows 10 compatibility verified.
+- First version of Delphi interface added.
+
+1.5:
+#################################################
+This version is just a bugfix release.
+- libcebomsr-1.x.so -> dependency to libpoconet.so.22 removed.
+- .NET API -> DllImport name fixed (verify .NET README on Linux!).
+- CeboMultiLogger (1.1) -> Fixed wrong configuration of Cebo-Stick trigger.
+- ProfiLab API -> update binding to cebomsr-1.5.
+- ProfiLab based tools (Control & Measurement 1.2) -> Update to latest API.
+
+1.4:
+#################################################
+- Enumeration bug of USB devices removed
+- Switch to libusb-1.x on all platforms.
+- Suffixes of libraries changed: Windows has now -x86 and -x86_64 and Linux suffixes has been removed.
+- GetUsbBaseVersion() removed (there is no separate module anymore).
+
+1.3:
+#################################################
+** System
+- Cebo Stick support added
+  - New DeviceType.CeboStick
+  - Counter class now has configuration feature (Stick support only).
+  - Trigger class now has enable/disable feature (Stick support only).
+  - Examples modified to work with Cebo-Stick.
+- Raspberry Pi support added (on Raspbian wheezy)
+  - C++, .NET, Java and Python API
+- ProfiLab support added (Windows only, separate download)
+- Build scripts of C++ API modified to support co-existing builds
+  for different platforms
+
+1.2:
+#################################################
+** System
+- Linux support added, the complete functionality (CeboLab and all API's)
+  are available on Linux systems now.
+  
+** C++ API
+- Internal fix which allows safe copies of class Device
+
+** Java API
+- Bugfix in Counter.read()
+
+** .NET API
+- Bugfix in Counter.Value
+- Bugfix in error to exception transition when running in 32 bit mode
+- Moved to api/dotnet (previous: api/.net) to circumvent problems on linux
+- Premake4-Script now defaults to Framework 4.0
+
+** Python API
+- Bugfix in Counter.read()
+- Added missing Device.FlagResetInputFifo
+- Shebang line to all example files added
+
+1.1:
+#################################################
+** Core-API:
+- Fix default trigger config, which was invalid.
+
+** C++ API
+- Several checks for invalid parameters added
+
+** Java API:
+- First release
+
+** .NET API:  
+- First release
+
+** Python API:
+- First release
+  
+1.0:
+#################################################
+- Initial release
